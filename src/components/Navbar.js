@@ -1,18 +1,16 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
+import profile from '../Me.jpg'
 
 
 class Navbar extends React.Component {
     render(){
         return (
-            <div>
-            <nav className='bg-blue-300 text-blue-500 p-2 text-right'>
-                User
-            </nav>
-                <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
-                    <div class="fixed flex flex-col top-0 left-0 w-64 bg-gray-900 h-full shadow-lg">
+            <div className='SideNav'>
+                <nav className='w-64 h-full flex-shrink-0'>
+                    <div class="flex flex-col top-0 left-0 bg-gray-900 h-full shadow-lg">
                         <div class="flex items-center pl-6 h-20 border-b border-gray-800">
-                            <img src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.0-9/117334168_2606581056324669_4951020710334194218_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeFo4bRKc5SfTQvzhwotnTaOfj1P6rO41HF-PU_qs7jUcU1pCerqu3HUsOB0yKyJQwnrgz8Au7GZADcpedo6WgM4&_nc_ohc=DWpkI3p4RSUAX_hKF_Y&_nc_ht=scontent.fmnl13-1.fna&oh=c13c63ee952123b14f0da72b99ccecc8&oe=6087FEC5" alt="" class="rounded-full h-10 w-10 flex items-center justify-center mr-3 border-2 border-blue-500"/>
+                            <img src={profile} alt="Sean Bordelon" class="rounded-full h-10 w-10 flex items-center justify-center mr-3 border-2 border-blue-500"/>
                             <div class="ml-1">
                                 <p class="ml-1 text-md font-medium tracking-wide truncate text-gray-100 font-sans">SEAN BORDELON</p>
                                 <div class="badge">
@@ -32,7 +30,13 @@ class Navbar extends React.Component {
                                         <span class="inline-flex justify-center items-center ml-4">
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                                         </span>
-                                        <span class="ml-2 font-semibold text-sm tracking-wide truncate font-sans">Home</span>
+                                        <NavLink
+                                            activeClassName='text-red-500'
+                                            exact
+                                            to='/'
+                                        >
+                                            <span class="ml-2 font-semibold text-sm tracking-wide truncate font-sans">Home</span>
+                                        </NavLink>
                                     </a>
                                 </li>
                                 <li>
@@ -79,7 +83,7 @@ class Navbar extends React.Component {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </nav>
             </div>
         )
     }
