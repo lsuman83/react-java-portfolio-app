@@ -6,29 +6,40 @@ import {
 } from 'react-router-dom'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import Signup from './components/auth/Signup'
+import Login from './components/auth/Login'
+import Logout from './components/auth/Logout'
+
 
 function App() {
   return (
-    <div className="App flex min-h-screen">
-      <Router>
-        <Navbar />
-
-        <div className='flex flex-col w-full'>
-          <header className='flex justify-end bg-blue-300 p-2'>
-            <form>
-              <input className='rounded-lg pl-2 mr-2' type='text' value='' placeholder='Search'/>
-              <button className='w-20 px-2 rounded-md bg-yellow-400' type='submit' value='Search'>Search</button>
-            </form>
-          </header>
-                
+    <div className="App">
+      <Router>    
           <Switch>
             <Route
               exact
               path='/'
               component={Home}
             />
+
+            <Route
+              exact
+              path='/signup'
+              component={Signup}
+            />
+
+            <Route
+              exact
+              path='/login'
+              component={Login}
+            />
+
+            <Route
+              exact
+              path='/logout'
+              component={Logout}
+            />
           </Switch>
-        </div>
       </Router>
     </div>
   );

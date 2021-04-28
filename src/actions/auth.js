@@ -1,6 +1,6 @@
 import { AUTHENTICATED, NOT_AUTHENTICATED } from '.'
 
-const setToken = (token) = {
+const setToken = (token) => {
     localStorage.setItem('token', token)
     localStorage.setItem('lastLoginTime', new Date(Date.now()).getTime())
 }
