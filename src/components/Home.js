@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Header from './Header'
 
 class Home extends React.Component {
 
@@ -20,10 +21,7 @@ class Home extends React.Component {
                 <Navbar />
                 <div className='flex flex-col w-full'>
                     <header className='flex justify-end bg-blue-300 p-2'>
-                        <form>
-                            <input onChange={this.handleChange} className='rounded-l-md pl-2' type='text' value='search' placeholder='Search'/>
-                            <button className='w-20 px-2 rounded-r-md bg-yellow-400' type='submit' value='Search'>Search</button>
-                        </form>
+                        <Header />
                     </header>
                     <div className='text-center'>
                         Welcome!
