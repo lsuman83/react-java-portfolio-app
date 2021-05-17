@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import profile from '../Me.jpg'
 import Logout from './auth/Logout'
@@ -23,8 +22,8 @@ const links = [
     }
 ]
 
-class Navbar extends React.Component {
-    render(){
+const Navbar = () => {
+    
         return (
             <div>
                 <nav className='w-64 h-full flex-shrink-0'>
@@ -96,7 +95,6 @@ class Navbar extends React.Component {
                 </nav>
             </div>
         )
-    }
 }
 
 export default Navbar
